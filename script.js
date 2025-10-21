@@ -60,8 +60,8 @@ function createProfile() {
         return;
     }
 
-    const gender = document.querySelector('input[name="gender"]:checked');
-    localStorage.setItem('gender',gender.value)
+    const gender = document.querySelector('input[name="gender"]:checked').value;
+    localStorage.setItem('gender',gender)
 
     const dob = document.querySelector('#dob').value
     localStorage.setItem('dob', dob)
@@ -72,6 +72,13 @@ function createProfile() {
 
     document.querySelector('.create-profile').style.display = "none"
     document.querySelector('.profile').style.display = "flex"
+
+
+    document.querySelector('.pName').textContent = localStorage.getItem('fName') + ' ' + localStorage.getItem('lName')
+    document.querySelector('.pDob').textContent = localStorage.getItem('dob')
+    document.querySelector('.pEmail').textContent = localStorage.getItem('email')
+    document.querySelector('.pNumber').textContent = localStorage.getItem('phoneNumber')
+    document.querySelector('.pGender').textContent = localStorage.getItem('gender')
 }
 
 document.querySelector('.save-profile').addEventListener('click', createProfile)
@@ -87,6 +94,6 @@ if (localStorage.getItem('fName') && localStorage.getItem('lName') && localStora
 
 document.querySelector('.pName').textContent = localStorage.getItem('fName') + ' ' + localStorage.getItem('lName')
     document.querySelector('.pDob').textContent = localStorage.getItem('dob')
-    document.querySelector('.pGender').textContent = localStorage.getItem('gender')
     document.querySelector('.pEmail').textContent = localStorage.getItem('email')
     document.querySelector('.pNumber').textContent = localStorage.getItem('phoneNumber')
+    document.querySelector('.pGender').textContent = localStorage.getItem('gender')
