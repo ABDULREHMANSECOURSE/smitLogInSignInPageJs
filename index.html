@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <span class="container">
+        <a
+            href="http://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=abdulrehmanprogrammer"><img
+                src="assets/arpLogo.png" alt=""></a>
+        <span class="create-account">
+            <span class="ep">
+                <span class="email">
+                    <h3>Email: </h3>
+                    <input type="email" class="email-inp">
+                </span>
+                <span class="password">
+                    <h3>Password: </h3>
+                    <span>
+                        <input type="password" class="password-inp">
+                        <img class="pas-eye" src="assets/eyeon.png" alt="">
+                    </span>
+                </span>
+            </span>
+            <button id="button">Create Account</button>
+        </span>
+        <span class="create-profile">
+            <span class="name">
+                <span class="fname">
+                    <h2>First name</h2>
+                    <input type="text" placeholder="First Name" class="fname" id="fname" name="fname">
+                </span>
+                <span class="lname">
+                    <h2>Last Name</h2>
+                    <input type="text" placeholder="Last Name" class="lname" id="lname" name="lname">
+                </span>
+            </span>
+            <span class="gender">
+                <label for="male" class="male">Male 
+                    <input type="radio" name="gender" id="male" value="Male">
+                </label>
+                <label for="female" class="female">Female 
+                    <input type="radio" name="gender" id="female" value="Female">
+                </label>
+                <label for="other" class="other">Other 
+                    <input type="radio" name="gender" id="other" value="Other">
+                </label>
+            </span>
+            <span class="dob">
+                <h2>DATE OF BIRTH</h2>
+                <input type="date" id="dob">
+            </span>
+            <span class="phone-number">
+                <h2>Phone Number</h2>
+                <input type="tel" placeholder="+92" id="phoneNumber">
+            </span>
+            <button class="save-profile">Save Profile</button>
+        </span>
+        <span class="profile">
+            <span class="profile-name">
+                <h4>Name: </h4>
+                <h2 class="pName"></h2>
+            </span>
+            <span class="profile-dob">
+                <h4>Date of birth: </h4>
+                <h2 class="pDob"></h2>
+            </span>
+            <span class="profile-gender">
+                <h4>Gender:</h4>
+                <h2 class="pGerder"></h2>
+            </span>
+            <span class="profile-email">
+                <h4>Email:</h4>
+                <h2 class="pEmail"></h2>
+            </span>
+            <span class="profile-number">
+                <h4>Phone number:</h4>
+                <h2 class="pNumber"></h2>
+            </span>
+        </span>
+    </span>
+</body>
+<script src="script.js"></script>
+
+</html>
