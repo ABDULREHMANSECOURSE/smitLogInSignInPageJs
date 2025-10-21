@@ -29,8 +29,8 @@ function createAccount() {
     if (password.length >= 8) {
         localStorage.setItem('email', email);
         localStorage.setItem('password', password);
-        // createAccount.style.display = "none"
-        // createProfile.style.display = "flex"
+        createAccount.style.display = "none"
+        createProfile.style.display = "flex"
     } else {
         alert("password must be 8 charector")
         return;
@@ -70,8 +70,8 @@ function createProfile() {
 
     localStorage.setItem('phoneNumber', phoneNumber)
 
-    // document.querySelector('.create-profile').style.display = "none"
-    // document.querySelector('.profile').style.display = "flex"
+    document.querySelector('.create-profile').style.display = "none"
+    document.querySelector('.profile').style.display = "flex"
 }
 
 document.querySelector('.save-profile').addEventListener('click', createProfile)
