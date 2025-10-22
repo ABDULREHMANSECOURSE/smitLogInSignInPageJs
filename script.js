@@ -28,7 +28,23 @@ const eyeS = document.querySelector('#eyeS')
 
 eyeS.addEventListener('click', togglePasEyeS);
 
+const dontHaveAccount = document.querySelector('.dontHaveAccount')
 
+const haveAccount = document.querySelector('.haveAccount')
+
+function dontHaveAccountFunc(){
+    document.querySelector('#logIn').style.display = "none"
+    document.querySelector('#signUp').style.display = "flex"
+}
+
+dontHaveAccount.addEventListener('click', dontHaveAccountFunc)
+
+function haveAccountFunc() {
+    document.querySelector('#logIn').style.display = "flex"
+    document.querySelector('#signUp').style.display = "none"
+}
+
+haveAccount.addEventListener('click', haveAccountFunc)
 
 function singUp() {
 
@@ -113,8 +129,7 @@ function singUp() {
 
     localStorage.setItem('accounts', JSON.stringify(accounts))
 
-
-
+    
 }
 
 document.querySelector('.save-profile').addEventListener('click', singUp)

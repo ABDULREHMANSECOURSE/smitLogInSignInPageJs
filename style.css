@@ -99,7 +99,7 @@ button:hover , a img:hover,img:hover{
 }
 .create-account{
     width: 100%;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -235,4 +235,17 @@ button:hover , a img:hover,img:hover{
 }
 .eyeSI{
     height: 30px;
+}
+
+.dontHaveAccount,.haveAccount{
+    font-size: 15px;
+    background-color: #00000000;
+    color: blue;
+    padding: 0;
+    width: 100vh;
+    margin-top: 10px;
+    margin-bottom: -10px;
+}
+.haveAccount{
+    margin-top: -10px;
 }
