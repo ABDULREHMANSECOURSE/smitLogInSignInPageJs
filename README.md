@@ -3,9 +3,11 @@
 This project is a **simple and functional Login/Sign-up Page** built using **HTML, CSS, and Vanilla JavaScript**. It was completed as an assignment to demonstrate skills in front-end development, focusing on client-side form validation and dynamic user interface manipulation.
 
 ### 🔗 Live Demo
-You can view the live deployment of this project here:
-* [**Vercel**](https://smitloginsigninpagejs.vercel.app/)
-* [**Github Pages:**](https://abdulrehmansecourse.github.io/smitLogInSignInPageJs)
+<p>You can view the live deployment of this project here (links open in a new tab):</p>
+<ul>
+    <li><a href="https://smitloginsigninpagejs.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel:</a></li>
+    <li><a href="https://abdulrehmansecourse.github.io/smitLogInSignInPageJs" target="_blank" rel="noopener noreferrer">Github Pages:</a></li>
+</ul>
 
 ***
 
