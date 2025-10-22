@@ -129,7 +129,17 @@ function singUp() {
 
     localStorage.setItem('accounts', JSON.stringify(accounts))
 
+    document.querySelector('#logIn').style.display = "flex"
+    document.querySelector('#signUp').style.display = "none"
 
+
+    fName.value = "";
+    lName.value = "";
+    document.querySelector('#emailS').value = "";
+    document.querySelector('#passwordS').value = "";
+    document.querySelector('#dob').value = "";
+    document.querySelector('#phoneNumber').value = "";
+    document.querySelector('#gender').value = "select gender";
 }
 
 document.querySelector('.save-profile').addEventListener('click', singUp);
@@ -139,8 +149,8 @@ document.querySelector('.save-profile').addEventListener('click', singUp);
 
 
 function logIn() {
-    const emailL = document.querySelector('#emailL').value
-    const passwordL = document.querySelector('#password').value
+    const emailL = document.querySelector('#emailL')
+    const passwordL = document.querySelector('#password')
 
     const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
 
@@ -149,13 +159,22 @@ function logIn() {
     for (let i = 0; i < accounts.length; i++) {
         const user = accounts[i];
 
-        if (user.email === emailL && user.password === passwordL) {
+        if (user.email === emailL.value && user.password === passwordL.value) {
             foundUser = user
             break;
         }
     }
 
     if (foundUser) {
+        emailL.value = ""
+        passwordL.value = ""
+        document.querySelector('#logIn').style.display = "none"
+        document.querySelector('#profile').style.display = "flex"
+        document.querySelector('.pName').textContent = foundUser.fName + ' ' + foundUser.lName
+        document.querySelector('.pDob').textContent = foundUser.dob
+        document.querySelector('.pEmail').textContent = foundUser.email
+        document.querySelector('.pNumber').textContent = foundUser.phoneNumber
+        document.querySelector('.pGender').textContent = foundUser.gender
         alert(`Login Successful! Welcome, ${foundUser.fName}!`);
     } else {
         alert("Login Failed: Incorrect email or password.");
