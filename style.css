@@ -99,12 +99,12 @@ button:hover , a img:hover,img:hover{
 }
 .create-account{
     width: 100%;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
 .create-profile{
-    display: none;
+    display: flex;
     width: 100%;
     align-items: center;
     flex-direction: column;
@@ -133,24 +133,14 @@ button:hover , a img:hover,img:hover{
 }
 
 .gender{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
     width: 100%;
-    justify-content: space-between;
     font-size: 25px;
-    flex-wrap: wrap;
+    background-color: #00000023;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
 }
 
-.gender label{
-    padding: 10px;
-    background-color: #00000023;
-    display: flex;
-    border-radius: 10px;
-    flex: 1;
-    justify-content: space-between
-}
 .dob{
     display: flex;
     flex-direction: column;
@@ -203,4 +193,46 @@ button:hover , a img:hover,img:hover{
     align-items: center;
     flex-direction: column;
     gap: 20px;
+}
+
+.si-ep{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+.emailSI{
+    padding: 15px;
+    background-color: #00000023;
+    border: none;
+    border-radius: 10px;
+}
+
+.passwordSI{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.si-ep > span{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    font-size: 15px;
+}
+.si-ep > span span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    background-color: #00000023;
+    border-radius: 10px;
+    padding-right: 5px;
+    justify-content: space-between;
+}
+.eyeSI{
+    height: 30px;
 }

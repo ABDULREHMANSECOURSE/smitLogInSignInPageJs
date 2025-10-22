@@ -13,7 +13,7 @@
         <a
             href="http://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=abdulrehmanprogrammer"><img
                 src="assets/arpLogo.png" alt=""></a>
-        <span class="create-account">
+        <span class="create-account" id="logIn">
             <span class="ep">
                 <span class="email">
                     <h3>Email: </h3>
@@ -22,14 +22,14 @@
                 <span class="password">
                     <h3>Password: </h3>
                     <span>
-                        <input type="password" class="password-inp">
-                        <img class="pas-eye" src="assets/eyeon.png" alt="">
+                        <input type="password" class="password-inp" id="password">
+                        <img class="pas-eye" id="passEye" src="assets/eyeon.png" alt="">
                     </span>
                 </span>
             </span>
             <button id="button">Create Account</button>
         </span>
-        <span class="create-profile">
+        <span class="create-profile" id="signUp">
             <span class="name">
                 <span class="fname">
                     <h2>First name</h2>
@@ -40,16 +40,24 @@
                     <input type="text" placeholder="Last Name" class="lname" id="lname" name="lname">
                 </span>
             </span>
-            <span class="gender">
-                <label for="male" class="male">Male 
-                    <input type="radio" name="gender" id="male" value="Male">
-                </label>
-                <label for="female" class="female">Female 
-                    <input type="radio" name="gender" id="female" value="Female">
-                </label>
-                <label for="other" class="other">Other 
-                    <input type="radio" name="gender" id="other" value="Other">
-                </label>
+            <select name="gender" class="gender" id="gender">
+                <option value="select gender" selected="1" disabled="1">Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <span class="si-ep">
+                <span>
+                    <h2>Email</h2>
+                    <input type="email" class="emailSI" id="emailS">
+                </span>
+                <span>
+                    <h2>Password</h2>
+                    <span>
+                        <input type="password" class="passwordSI" id="passwordS">
+                        <img class="eyeSI" class="passEyeSI" src="assets/eyeon.png" alt="">
+                    </span>
+                </span>
             </span>
             <span class="dob">
                 <h2>DATE OF BIRTH</h2>
