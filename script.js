@@ -13,6 +13,23 @@ const pasEye = document.querySelector('#passEye');
 pasEye.addEventListener('click', togglePasEye);
 
 
+
+function togglePasEyeS() {
+    if (passwordS.type === 'password') {
+        passwordS.type = 'text';
+        eyeS.src = 'assets/eyeoff.png';
+    } else {
+        passwordS.type = 'password';
+        eyeS.src = 'assets/eyeon.png';
+    }
+}
+const passwordS = document.querySelector('#passwordS')
+const eyeS = document.querySelector('#eyeS')
+
+eyeS.addEventListener('click', togglePasEyeS);
+
+
+
 function singUp() {
 
     const user = {}
@@ -101,88 +118,3 @@ function singUp() {
 }
 
 document.querySelector('.save-profile').addEventListener('click', singUp)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function createAccount() {
-//     const email = document.querySelector('.email-inp').value;
-//     const password = document.querySelector('.password-inp').value;
-//     const createAccount = document.querySelector('.create-account')
-//     const createProfile = document.querySelector('.create-profile')
-
-// for (let i = 0; i < password.length; i++) {
-//     if (password[i] === " ") {
-//         alert("Space is not allowed in password");
-//         return;
-//     }
-// }
-// if (password.length >= 8) {
-//     localStorage.setItem('email', email);
-//     localStorage.setItem('password', password);
-//     createAccount.style.display = "none"
-//     createProfile.style.display = "flex"
-// } else {
-//     alert("password must be 8 charector")
-//     return;
-// }
-
-// }
-
-// const button = document.getElementById("button");
-// button.addEventListener('click', createAccount);
-
-// function createProfile() {
-//
-
-//     const gender = document.querySelector('input[name="gender"]:checked').value;
-//     localStorage.setItem('gender',gender)
-
-//     const dob = document.querySelector('#dob').value
-//     localStorage.setItem('dob', dob)
-
-//     const phoneNumber = document.querySelector('#phoneNumber').value
-
-//     localStorage.setItem('phoneNumber', phoneNumber)
-
-//     document.querySelector('.create-profile').style.display = "none"
-//     document.querySelector('.profile').style.display = "flex"
-
-
-//     document.querySelector('.pName').textContent = localStorage.getItem('fName') + ' ' + localStorage.getItem('lName')
-//     document.querySelector('.pDob').textContent = localStorage.getItem('dob')
-//     document.querySelector('.pEmail').textContent = localStorage.getItem('email')
-//     document.querySelector('.pNumber').textContent = localStorage.getItem('phoneNumber')
-//     document.querySelector('.pGender').textContent = localStorage.getItem('gender')
-// }
-
-
-// if (localStorage.getItem('email') && localStorage.getItem('password')) {
-//     document.querySelector('.create-account').style.display = "none"
-//     document.querySelector('.create-profile').style.display = "flex"
-// }
-// if (localStorage.getItem('fName') && localStorage.getItem('lName') && localStorage.getItem('gender') && localStorage.getItem('dob') && localStorage.getItem('phoneNumber')) {
-//     document.querySelector('.create-profile').style.display = "none"
-//     document.querySelector('.profile').style.display = "flex"
-// }
-
-// document.querySelector('.pName').textContent = localStorage.getItem('fName') + ' ' + localStorage.getItem('lName')
-//     document.querySelector('.pDob').textContent = localStorage.getItem('dob')
-//     document.querySelector('.pEmail').textContent = localStorage.getItem('email')
-//     document.querySelector('.pNumber').textContent = localStorage.getItem('phoneNumber')
-//     document.querySelector('.pGender').textContent = localStorage.getItem('gender')
