@@ -5,8 +5,8 @@ This project is a **simple and functional Login/Sign-up Page** built using **HTM
 ### 🔗 Live Demo
 <p>You can view the live deployment of this project here (links open in a new tab):</p>
 <ul>
-    <li><a href="https://smitloginsigninpagejs.vercel.app/" target="_blank" rel="noopener noreferrer">Vercel:</a></li>
-    <li><a href="https://abdulrehmansecourse.github.io/smitLogInSignInPageJs" target="_blank" rel="noopener noreferrer">Github Pages:</a></li>
+    <li><a href="https://smitloginsigninpagejs.vercel.app/" target="_blank">Vercel:</a></li>
+    <li><a href="https://abdulrehmansecourse.github.io/smitLogInSignInPageJs" target="_blank">Github Pages:</a></li>
 </ul>
 
 ***
