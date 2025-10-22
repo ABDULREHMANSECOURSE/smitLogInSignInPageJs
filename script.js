@@ -32,7 +32,7 @@ const dontHaveAccount = document.querySelector('.dontHaveAccount')
 
 const haveAccount = document.querySelector('.haveAccount')
 
-function dontHaveAccountFunc(){
+function dontHaveAccountFunc() {
     document.querySelector('#logIn').style.display = "none"
     document.querySelector('#signUp').style.display = "flex"
 }
@@ -129,7 +129,37 @@ function singUp() {
 
     localStorage.setItem('accounts', JSON.stringify(accounts))
 
-    
+
 }
 
-document.querySelector('.save-profile').addEventListener('click', singUp)
+document.querySelector('.save-profile').addEventListener('click', singUp);
+
+
+
+
+
+function logIn() {
+    const emailL = document.querySelector('#emailL').value
+    const passwordL = document.querySelector('#password').value
+
+    const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+
+    let foundUser = null
+
+    for (let i = 0; i < accounts.length; i++) {
+        const user = accounts[i];
+
+        if (user.email === emailL && user.password === passwordL) {
+            foundUser = user
+            break;
+        }
+    }
+
+    if (foundUser) {
+        alert(`Login Successful! Welcome, ${foundUser.fName}!`);
+    } else {
+        alert("Login Failed: Incorrect email or password.");
+    }
+};
+
+document.querySelector('#button').addEventListener('click', logIn)
