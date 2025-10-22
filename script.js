@@ -140,9 +140,6 @@ function singUp() {
     document.querySelector('#dob').value = "";
     document.querySelector('#phoneNumber').value = "";
     document.querySelector('#gender').value = "select gender";
-
-    emailL.value = ""
-    passwordL.value = ""
 }
 
 document.querySelector('.save-profile').addEventListener('click', singUp);
@@ -169,20 +166,8 @@ function logIn() {
     }
 
     if (foundUser) {
-        fName.value = "";
-        lName.value = "";
-        document.querySelector('#emailS').value = "";
-        document.querySelector('#passwordS').value = "";
-        document.querySelector('#dob').value = "";
-        document.querySelector('#phoneNumber').value = "";
-        document.querySelector('#gender').value = "select gender";
-
-
         emailL.value = ""
         passwordL.value = ""
-
-
-        
         document.querySelector('#logIn').style.display = "none"
         document.querySelector('#profile').style.display = "flex"
         document.querySelector('.pName').textContent = foundUser.fName + ' ' + foundUser.lName
