@@ -170,6 +170,8 @@ function logIn() {
         passwordL.value = ""
         document.querySelector('#logIn').style.display = "none"
         document.querySelector('#profile').style.display = "flex"
+
+
         document.querySelector('.pName').textContent = foundUser.fName + ' ' + foundUser.lName
         document.querySelector('.pDob').textContent = foundUser.dob
         document.querySelector('.pEmail').textContent = foundUser.email
@@ -179,6 +181,34 @@ function logIn() {
     } else {
         alert("Login Failed: Incorrect email or password.");
     }
+
+    localStorage.setItem('logedAccount', JSON.stringify(foundUser))
 };
 
 document.querySelector('#button').addEventListener('click', logIn)
+
+function autoLogin() {
+    const loggedAccount = JSON.parse(localStorage.getItem('logedAccount'));
+
+    if (loggedAccount) {
+        document.querySelector('#logIn').style.display = "none";
+        document.querySelector('#profile').style.display = "flex";
+
+        document.querySelector('.pName').textContent = loggedAccount.fName + ' ' + loggedAccount.lName;
+        document.querySelector('.pDob').textContent = loggedAccount.dob;
+        document.querySelector('.pEmail').textContent = loggedAccount.email;
+        document.querySelector('.pNumber').textContent = loggedAccount.phoneNumber;
+        document.querySelector('.pGender').textContent = loggedAccount.gender;
+    }
+}
+
+autoLogin();
+
+function logoutFunc() {
+    document.querySelector('#profile').style.display = "none";
+    document.querySelector('#logIn').style.display = "flex";
+
+    localStorage.removeItem('logedAccount')
+}
+
+document.querySelector('.logout').addEventListener('click', logoutFunc)
