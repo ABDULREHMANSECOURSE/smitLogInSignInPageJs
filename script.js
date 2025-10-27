@@ -28,6 +28,11 @@ const eyeS = document.querySelector('#eyeS')
 
 eyeS.addEventListener('click', togglePasEyeS);
 
+
+
+
+
+
 const dontHaveAccount = document.querySelector('.dontHaveAccount')
 
 const haveAccount = document.querySelector('.haveAccount')
@@ -45,6 +50,11 @@ function haveAccountFunc() {
 }
 
 haveAccount.addEventListener('click', haveAccountFunc)
+
+
+
+
+
 
 function singUp() {
 
@@ -79,6 +89,16 @@ function singUp() {
     }
 
     const emailS = document.querySelector('#emailS').value
+
+    const checkEmail = JSON.parse(localStorage.getItem('accounts'));
+
+    if (checkEmail) {
+        const emailExists = checkEmail.find((eF) => eF.email === emailS);
+        if (emailExists) {
+            alert('email already exists');
+            return;
+        }
+    }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
@@ -186,6 +206,12 @@ function logIn() {
 };
 
 document.querySelector('#button').addEventListener('click', logIn)
+
+
+
+
+
+
 
 function autoLogin() {
     const loggedAccount = JSON.parse(localStorage.getItem('logedAccount'));
