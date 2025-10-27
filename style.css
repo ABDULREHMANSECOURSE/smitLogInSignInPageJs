@@ -266,7 +266,7 @@ button:hover , a img:hover,img:hover{
 
 
 
-/* .popup {
+.popup {
     position: fixed;
     top: -100px;
     left: 50%;
@@ -303,4 +303,4 @@ button:hover , a img:hover,img:hover{
         top: -100px;
         opacity: 0;
     }
-} */
+}

@@ -1,3 +1,20 @@
+function popupRed(text) {
+    const popup = document.createElement('span');
+    popup.className = 'popup';
+    const p = document.createElement('p');
+    p.textContent = text;
+    popup.appendChild(p);
+    document.body.appendChild(popup);
+}
+function popupGreen(text) {
+    const popup = document.createElement('span');
+    popup.className = 'popup';
+    const p = document.createElement('p');
+    p.textContent = text;
+    popup.appendChild(p);
+    document.body.appendChild(popup);
+}
+
 function togglePasEye() {
     if (passinp.type === 'password') {
         passinp.type = 'text';
@@ -67,6 +84,7 @@ function singUp() {
         fName.style.border = "none";
         user.fName = fName.value;
     } else {
+        popup('First name must be between 3 and 12 characters.');
         fName.style.border = "2px solid red";
         return;
     }
@@ -74,6 +92,7 @@ function singUp() {
         lName.style.border = "none";
         user.lName = lName.value;
     } else {
+        popup('Last name must be between 3 and 12 characters.');
         lName.style.border = "2px solid red";
         return;
     }
@@ -84,7 +103,7 @@ function singUp() {
     if (gender.value !== 'select gender') {
         user.gender = gender.value
     } else {
-        alert('select gender')
+        popup('select gender')
         return;
     }
 
@@ -95,7 +114,7 @@ function singUp() {
     if (checkEmail) {
         const emailExists = checkEmail.find((eF) => eF.email === emailS);
         if (emailExists) {
-            alert('email already exists');
+            popup('email already exists');
             return;
         }
     }
@@ -105,7 +124,7 @@ function singUp() {
     if (emailS.length >= 3 && emailS.length <= 254 && emailRegex.test(emailS)) {
         user.email = emailS
     } else {
-        alert('enter a valid email')
+        popup('enter a valid email')
         return;
     }
 
@@ -113,14 +132,14 @@ function singUp() {
 
     for (let i = 0; i < password.length; i++) {
         if (password[i] === " ") {
-            alert("Space is not allowed in password");
+            popup("Space is not allowed in password");
             return;
         }
     }
     if (password.length >= 8) {
         user.password = password
     } else {
-        alert("password must be 8 charector")
+        popup("password must be 8 charector")
         return;
     }
 
@@ -129,7 +148,7 @@ function singUp() {
     if (dob.length == 10) {
         user.dob = dob
     } else {
-        alert('enter valid date of birth')
+        popup('enter valid date of birth')
         return;
     }
 
@@ -139,7 +158,7 @@ function singUp() {
     if (phoneNumberRegex.test(phoneNumber)) {
         user.phoneNumber = phoneNumber
     } else {
-        alert('incorrect phone number')
+        popup('incorrect phone number')
         return;
     }
 
@@ -197,9 +216,9 @@ function logIn() {
         document.querySelector('.pEmail').textContent = foundUser.email
         document.querySelector('.pNumber').textContent = foundUser.phoneNumber
         document.querySelector('.pGender').textContent = foundUser.gender
-        alert(`Login Successful! Welcome, ${foundUser.fName}!`);
+        popup(`Login Successful! Welcome, ${foundUser.fName}!`);
     } else {
-        alert("Login Failed: Incorrect email or password.");
+        popup("Login Failed: Incorrect email or password.");
     }
 
     localStorage.setItem('logedAccount', JSON.stringify(foundUser))
