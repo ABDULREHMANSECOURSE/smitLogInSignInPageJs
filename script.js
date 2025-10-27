@@ -1,4 +1,4 @@
-function popupRed(text) {
+function popup(text) {
     const popup = document.createElement('span');
     popup.className = 'popup';
     const p = document.createElement('p');
@@ -9,6 +9,7 @@ function popupRed(text) {
 function popupGreen(text) {
     const popup = document.createElement('span');
     popup.className = 'popup';
+    popup.style.backgroundColor = 'green';
     const p = document.createElement('p');
     p.textContent = text;
     popup.appendChild(p);
@@ -167,6 +168,7 @@ function singUp() {
     accounts.push(user)
 
     localStorage.setItem('accounts', JSON.stringify(accounts))
+    popupGreen('Account created successfully! You can now log in.');
 
     document.querySelector('#logIn').style.display = "flex"
     document.querySelector('#signUp').style.display = "none"
@@ -216,7 +218,7 @@ function logIn() {
         document.querySelector('.pEmail').textContent = foundUser.email
         document.querySelector('.pNumber').textContent = foundUser.phoneNumber
         document.querySelector('.pGender').textContent = foundUser.gender
-        popup(`Login Successful! Welcome, ${foundUser.fName}!`);
+        popupGreen(`Login Successful! Welcome, ${foundUser.fName}!`);
     } else {
         popup("Login Failed: Incorrect email or password.");
     }
@@ -254,6 +256,7 @@ function logoutFunc() {
     document.querySelector('#logIn').style.display = "flex";
 
     localStorage.removeItem('logedAccount')
+    popupGreen('You have been successfully logged out.');
 }
 
 document.querySelector('.logout').addEventListener('click', logoutFunc)
